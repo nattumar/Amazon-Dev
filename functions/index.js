@@ -10,9 +10,7 @@ const stripe = require("stripe")(process.env.STRIPE_KEY);
 const app = express();
 
 // Configure CORS to allow requests from multiple origins
-app.use(cors({origin:true}));
-
-
+app.use(cors());
 app.use(express.json());
 
 // Root route for health check
